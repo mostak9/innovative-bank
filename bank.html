@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovative Bank Inside</title>
+    <!-- tailwind and daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom style -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#4b4e6d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-7">
+        <span class="text-primary-color font-medium">Innovative</span> Bank
+      </h1>
+    </header>
+    <main>
+       
+        <section class="w-9/12 mx-auto mt-7"">
+             <!-- display section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div class="bg-green-400 p-8 rounded-xl">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h1 class="text-5xl font-medium">$<span id="deposit-balance">00</span></h1>
+                </div>
+                <div class="bg-rose-400 p-8 rounded-xl">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h1 class="text-5xl font-medium">$<span id="withdraw-balance">00</span></h1>
+                </div>
+                <div class="bg-indigo-500 p-8 rounded-xl">
+                    <h4 class="text-3xl">Account Balance</h4>
+                    <h1 class="text-5xl font-medium">$<span id="account-balance">1240</span></h1>
+                </div>
+
+            </div>
+
+            <!-- amount enter section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-7">
+                <div class="space-y-3 bg-sky-400 p-8 rounded-xl">
+                    <h2 class="text-3xl font-semibold">Pease Deposit</h2>
+                    <input id="deposit-field" type="text" placeholder="$ Amount you want to deposit" class="input input-bordered w-full max-w-xs block" />
+                    <button id="btn-deposit" class="btn bg-primary-color text-white border-none hover:text-primary-color font-semibold">Deposit</button>
+                </div>
+                <div class="space-y-3 bg-orange-400 p-8 rounded-xl">
+                    <h2 class="text-3xl font-semibold">Pease Withdraw</h2>
+                    <input id="withdraw-field" type="text" placeholder="$ Amount you want to Withdraw" class="input input-bordered w-full max-w-xs block" />
+                    <button id="btn-withdraw" class="btn bg-primary-color text-white border-none hover:text-primary-color font-semibold">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/bank.js"></script>
+  </body>
+</html>

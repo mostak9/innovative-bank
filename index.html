@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,9 +8,49 @@
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
       rel="stylesheet"
-      type="text/css"/>
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- custom style -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#4b4e6d",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-7">
+        <span class="text-primary-color font-medium">Innovative</span> Bank
+      </h1>
+    </header>
+    <main>
+      <!-- login section -->
+      <section class="">
+        <div
+          class="bg-primary-color w-9/12 mx-auto p-9 rounded-lg mt-7 space-y-2"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email Address"
+            class="input input-bordered w-full max-w-xs block"
+          />
+          <input
+            type="password"
+            placeholder="Enter Your Password"
+            class="input input-bordered w-full max-w-xs block"
+          />
+          <button class="btn btn-active btn-neutral">Log In</button>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
